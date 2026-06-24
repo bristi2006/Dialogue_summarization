@@ -260,7 +260,7 @@ custom_css = """
     }
 
     /* Position the copy button iframe */
-    div:has(iframe[title="copy_button"]) {
+    div:has(iframe) {
         position: absolute !important;
         top: 20px !important;
         right: 20px !important;
@@ -522,7 +522,6 @@ def render_output_panel():
                 </button>
             </div>
             """,
-            title="copy_button",
             height=32,
             scrolling=False,
         )
