@@ -424,6 +424,8 @@ def render_input_panel():
                         
                         # Clear inputs for next generation
                         st.session_state.dialogue = ""
+                        if "dialogue_input" in st.session_state:
+                            st.session_state.dialogue_input = ""
                         st.session_state.last_uploaded_file = None
                         st.session_state.uploader_key += 1
                         
