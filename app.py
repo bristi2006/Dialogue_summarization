@@ -25,6 +25,14 @@ def icon_svg(name: str) -> str:
     return f"<span class='inline-icon icon-{name}'>{icons[name]}</span>"
 
 
+def copy_icon_svg() -> str:
+    return (
+        "<svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' "
+        "stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'>"
+        "<rect x='9' y='9' width='13' height='13' rx='2'/><path d='M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1'/></svg>"
+    )
+
+
 custom_css = """
 <style>
     * {
@@ -458,10 +466,11 @@ def render_summary_card(summary_text: str) -> None:
                     document.body.removeChild(temp);
                     showCopied();
                 }}
+                
             </script>
             <div class="copy-wrap">
                 <button class="copy-btn" type="button" title="Copy summary" aria-label="Copy summary" data-summary="{summary_attr}" onclick="copySummary(this)">
-                    {icon_svg('copy')}
+                    {copy_icon_svg()}
                 </button>
                 <span style="margin-left:8px;font-size:12px;color:#8B949E;opacity:0;transition:opacity .2s ease;">Copied</span>
             </div>
@@ -495,15 +504,15 @@ with col1:
         try:
             file_content = uploaded_file.read().decode("utf-8")
             if not file_content.strip():
-                st.error("The uploaded file is empty. Please upload a file with content.")
+                pass
             else:
                 st.session_state.uploaded_dialogue = file_content
                 st.session_state.dialogue = file_content
                 st.success(f"File '{uploaded_file.name}' loaded successfully.")
         except UnicodeDecodeError:
-            st.error("Could not decode the file. Please ensure it's a valid UTF-8 text file.")
+            pass
         except Exception as e:
-            st.error(f"Error reading file: {str(e)}")
+            pass
 
     st.markdown('<div class="input-section">', unsafe_allow_html=True)
     st.markdown(f'<div class="input-title">{icon_svg("dialogue")} Enter Your Dialogue</div>', unsafe_allow_html=True)
@@ -518,22 +527,18 @@ with col1:
     st.session_state.dialogue = dialogue
     st.markdown("</div>", unsafe_allow_html=True)
 
-    left_spacer, action_col, right_spacer = st.columns([1, 2, 1], gap="small")
-    with action_col:
-        if st.button("Generate Summary", use_container_width=True, key="generate_btn"):
-            active_dialogue = dialogue.strip() or st.session_state.uploaded_dialogue.strip()
-            if active_dialogue:
-                with st.spinner("Analyzing dialogue..."):
-                    result = summarizer(
-                        active_dialogue,
-                        max_length=60,
-                        min_length=10,
-                        do_sample=False,
-                    )
-                    st.session_state.summary = result[0]["summary_text"]
-                    st.session_state.dialogue = active_dialogue
-            else:
-                st.warning("Please enter a dialogue or upload a text file.")
+    if st.button("Generate Summary", use_container_width=True, key="generate_btn"):
+        active_dialogue = dialogue.strip() or st.session_state.uploaded_dialogue.strip()
+        if active_dialogue:
+            with st.spinner("Analyzing dialogue..."):
+                result = summarizer(
+                    active_dialogue,
+                    max_length=60,
+                    min_length=10,
+                    do_sample=False,
+                )
+                st.session_state.summary = result[0]["summary_text"]
+                st.session_state.dialogue = active_dialogue
 
 with col2:
     if st.session_state.summary:
@@ -573,12 +578,3 @@ with col2:
                 ''',
                 unsafe_allow_html=True,
             )
-    else:
-        st.markdown(
-            '''
-            <div class="result-card" style="text-align: center; padding: 60px 20px; opacity: 0.72;">
-                <div style="font-size: 16px; color: #8B949E; line-height: 1.7;">Enter a dialogue or upload a text file, then click Generate Summary to see the result here.</div>
-            </div>
-            ''',
-            unsafe_allow_html=True,
-        )
