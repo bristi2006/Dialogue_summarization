@@ -378,10 +378,11 @@ def render_input_panel():
         is_file_uploaded = uploaded_file is not None
 
         st.markdown(f'<div class="input-title" style="margin-top: 18px;">{icon_svg("dialogue")} Enter Your Dialogue</div>', unsafe_allow_html=True)
+        dialogue_key = f"dialogue_input_{st.session_state.uploader_key}"
         dialogue_text = st.text_area(
             "",
             value=st.session_state.dialogue,
-            key="dialogue_input",
+            key=dialogue_key,
             height=300,
             placeholder="A: Hi\nB: Hello, how are you?\nA: I'm doing great! Working on an AI project...\nB: That sounds interesting!",
             label_visibility="collapsed",
@@ -424,8 +425,6 @@ def render_input_panel():
                         
                         # Clear inputs for next generation
                         st.session_state.dialogue = ""
-                        if "dialogue_input" in st.session_state:
-                            st.session_state.dialogue_input = ""
                         st.session_state.last_uploaded_file = None
                         st.session_state.uploader_key += 1
                         
