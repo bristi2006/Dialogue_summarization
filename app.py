@@ -369,62 +369,108 @@ def calculate_stats(input_text, summary_text):
 
 def render_summary_card(summary_text: str) -> None:
     summary_attr = escape(summary_text, quote=True)
-    components.html(
-        f"""
-        <script>
-            function copySummary(button) {{
-                const text = button.dataset.summary || '';
-                const updateStatus = () => {{
-                    const el = document.getElementById('copy-status');
-                    if (el) {{
-                        el.textContent = 'Copied';
-                        el.style.opacity = '1';
-                        setTimeout(() => el.style.opacity = '0', 1200);
-                    }}
-                }};
-
-                if (navigator.clipboard && navigator.clipboard.writeText) {{
-                    navigator.clipboard.writeText(text).then(updateStatus).catch(() => {{
-                        const temp = document.createElement('textarea');
-                        temp.value = text;
-                        temp.style.position = 'fixed';
-                        temp.style.opacity = '0';
-                        document.body.appendChild(temp);
-                        temp.focus();
-                        temp.select();
-                        document.execCommand('copy');
-                        document.body.removeChild(temp);
-                        updateStatus();
-                    }});
-                    return;
+    st.markdown('<div class="summary-shell">', unsafe_allow_html=True)
+    head_col, button_col = st.columns([12, 1], gap="small")
+    with head_col:
+        st.markdown(f'<div class="summary-title">{icon_svg("summary")} Summary</div>', unsafe_allow_html=True)
+    with button_col:
+        components.html(
+            f"""
+            <style>
+                html, body {{
+                    margin: 0;
+                    padding: 0;
+                    background: transparent;
+                    overflow: hidden;
+                    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
                 }}
 
-                const temp = document.createElement('textarea');
-                temp.value = text;
-                temp.style.position = 'fixed';
-                temp.style.opacity = '0';
-                document.body.appendChild(temp);
-                temp.focus();
-                temp.select();
-                document.execCommand('copy');
-                document.body.removeChild(temp);
-                updateStatus();
-            }}
-        </script>
-        <div class="summary-shell">
-            <div class="summary-head">
-                <div class="summary-title">{icon_svg('summary')} Summary</div>
-                <button class="copy-icon-btn" type="button" title="Copy summary" aria-label="Copy summary" data-summary="{summary_attr}" onclick="copySummary(this)">
+                .copy-wrap {{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    height: 100%;
+                }}
+
+                .copy-btn {{
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 10px;
+                    border: 1px solid #30363D;
+                    background: rgba(22, 27, 34, 0.92);
+                    color: #8B949E;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                    padding: 0;
+                }}
+
+                .copy-btn:hover {{
+                    border-color: #4F7CAC;
+                    color: #E6EDF3;
+                    transform: translateY(-1px);
+                    box-shadow: 0 6px 16px rgba(79, 124, 172, 0.12);
+                }}
+
+                .copy-btn svg {{
+                    width: 16px;
+                    height: 16px;
+                }}
+            </style>
+            <script>
+                function copySummary(button) {{
+                    const text = button.dataset.summary || '';
+                    const feedback = button.nextElementSibling;
+                    const showCopied = () => {{
+                        if (feedback) {{
+                            feedback.textContent = 'Copied';
+                            feedback.style.opacity = '1';
+                            setTimeout(() => feedback.style.opacity = '0', 900);
+                        }}
+                    }};
+
+                    if (navigator.clipboard && navigator.clipboard.writeText) {{
+                        navigator.clipboard.writeText(text).then(showCopied).catch(() => {{
+                            const temp = document.createElement('textarea');
+                            temp.value = text;
+                            temp.style.position = 'fixed';
+                            temp.style.opacity = '0';
+                            document.body.appendChild(temp);
+                            temp.focus();
+                            temp.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(temp);
+                            showCopied();
+                        }});
+                        return;
+                    }}
+
+                    const temp = document.createElement('textarea');
+                    temp.value = text;
+                    temp.style.position = 'fixed';
+                    temp.style.opacity = '0';
+                    document.body.appendChild(temp);
+                    temp.focus();
+                    temp.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(temp);
+                    showCopied();
+                }}
+            </script>
+            <div class="copy-wrap">
+                <button class="copy-btn" type="button" title="Copy summary" aria-label="Copy summary" data-summary="{summary_attr}" onclick="copySummary(this)">
                     {icon_svg('copy')}
                 </button>
+                <span style="margin-left:8px;font-size:12px;color:#8B949E;opacity:0;transition:opacity .2s ease;">Copied</span>
             </div>
-            <div class="summary-body">{escape(summary_text)}</div>
-            <div id="copy-status" style="margin-top:10px;font-size:12px;color:#8B949E;opacity:0;transition:opacity .2s ease;">Copied</div>
-        </div>
-        """,
-        height=max(200, min(420, 140 + len(summary_text) // 2)),
-        scrolling=True,
-    )
+            """,
+            height=44,
+            scrolling=False,
+        )
+    st.markdown(f'<div class="summary-body">{escape(summary_text)}</div>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
 
 st.markdown(
