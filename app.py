@@ -553,7 +553,7 @@ def render_output_panel():
         st.markdown(f'<div class="summary-body" style="margin-top: 12px;">{escape(summary_text)}</div>', unsafe_allow_html=True)
 
     # Render Statistics Card
-    input_text = st.session_state.get("dialogue", "")
+    input_text = st.session_state.get("summarized_dialogue", "")
     if not isinstance(input_text, str):
         input_text = ""
     input_words, summary_words, compression = calculate_stats(input_text, summary_text)
