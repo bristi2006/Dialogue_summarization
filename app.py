@@ -260,7 +260,7 @@ custom_css = """
     }
 
     /* Position the copy button iframe */
-    div:has(iframe) {
+    div[data-testid="stVerticalBlockBorderWrapper"] div[data-testid="element-container"]:has(iframe) {
         position: absolute !important;
         top: 20px !important;
         right: 20px !important;
