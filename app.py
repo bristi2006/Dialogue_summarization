@@ -325,10 +325,14 @@ if "dialogue" not in st.session_state:
     st.session_state.dialogue = ""
 if "summary" not in st.session_state:
     st.session_state.summary = ""
+if "summarized_dialogue" not in st.session_state:
+    st.session_state.summarized_dialogue = ""
 if "validation_error" not in st.session_state:
     st.session_state.validation_error = ""
 if "last_uploaded_file" not in st.session_state:
     st.session_state.last_uploaded_file = None
+if "uploader_key" not in st.session_state:
+    st.session_state.uploader_key = 0
 
 summarizer = load_model()
 
@@ -341,9 +345,14 @@ def calculate_stats(input_text, summary_text):
 
 
 def render_input_panel():
+    current_dialogue = st.session_state.get("dialogue", "").strip()
+    is_text_entered = bool(current_dialogue)
+
     with st.container(border=True):
         st.markdown(f'<div class="input-title">{icon_svg("upload")} Upload Dialogue <span style="color:#8B949E;font-weight:500;font-size:13px;">(optional)</span></div>', unsafe_allow_html=True)
-        uploaded_file = st.file_uploader("", type=["txt"], label_visibility="collapsed", key="file_uploader")
+        
+        uploader_key = f"file_uploader_{st.session_state.uploader_key}"
+        uploaded_file = st.file_uploader("", type=["txt"], label_visibility="collapsed", key=uploader_key, disabled=is_text_entered)
 
         # Load file content if uploaded
         if uploaded_file is not None:
@@ -365,6 +374,9 @@ def render_input_panel():
         else:
             st.session_state.last_uploaded_file = None
 
+        # Check if file upload is active to disable text area
+        is_file_uploaded = uploaded_file is not None
+
         st.markdown(f'<div class="input-title" style="margin-top: 18px;">{icon_svg("dialogue")} Enter Your Dialogue</div>', unsafe_allow_html=True)
         dialogue_text = st.text_area(
             "",
@@ -373,6 +385,7 @@ def render_input_panel():
             height=300,
             placeholder="A: Hi\nB: Hello, how are you?\nA: I'm doing great! Working on an AI project...\nB: That sounds interesting!",
             label_visibility="collapsed",
+            disabled=is_file_uploaded,
         )
         st.session_state.dialogue = dialogue_text
 
@@ -405,7 +418,15 @@ def render_input_panel():
                             do_sample=False,
                         )
                         st.session_state.summary = result[0]["summary_text"]
-                        st.session_state.dialogue = active_dialogue
+                        
+                        # Store dialogue that was summarized for stats calculation
+                        st.session_state.summarized_dialogue = active_dialogue
+                        
+                        # Clear inputs for next generation
+                        st.session_state.dialogue = ""
+                        st.session_state.last_uploaded_file = None
+                        st.session_state.uploader_key += 1
+                        
                         st.rerun()
                     except Exception as e:
                         st.session_state.validation_error = f"Error summarizing dialogue: {e}"
