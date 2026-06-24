@@ -1,0 +1,2 @@
+eval_loss,eval_model_preparation_time,eval_rouge1,eval_rouge2,eval_rougeL,eval_rougeLsum,eval_runtime,eval_samples_per_second,eval_steps_per_second,epoch
+1.4556180238723755,0.0053,52.0291,27.9326,43.736,43.7285,187.7171,4.358,2.179,3.0

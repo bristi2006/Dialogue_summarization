@@ -1,0 +1,243 @@
+id,dialogue,reference_summary,generated_summary,rouge_l,error_category
+13728896,"Alexander: Personal request to send me message when you will be in taxi
+Alexander: If any problem, call me
+Tom: ;)
+Tom: Thank You, I appreciate it
+Alexander: Taxi confirmation below
+Alexander: <file_photo>
+Tom: Thank you for the transport, we arrived safely, although without luggages :/
+Alexander: Good but bad
+Tom: Yeeees","Tom arrived safely, but without his luggage.",Tom will be in a taxi. Alexander sends him a photo of the taxi.,9.5238,missing_information
+13682496,"Myah: <file_photo>
+Selah: I can't see the phone number very well. Rewrite it plz
+Myah: <file_photo>
+Selah: The phone of that person is off",Selah called a person that did not pick up.,Selah can't see the phone number very well.,11.1111,missing_information
+13729708,"Gab: Ah that's better. Now we can message all we like.
+Kat: :-)
+Gab: So when can we meet up for a drink?
+Kat: Fairly busy at the moment so I'm not sure when.
+Gab: I'd love to meet you in real life.
+Kat: I don't meet strange men from the internet.
+Gab: Why not?
+Kat: Not that sort of gal.
+Gab: But you're talking to me, aren't you?
+Kat: Yes, but that's different.
+Gab: How so?
+Kat: Just is.
+Gab: But it would be so much nicer to do this cuddled up right next to you...
+Kat: I think this was a mistake.
+Gab: Are you there?
+Gab: Where did you go?
+Gab: Kat?",Gab wants to meet Kat in real life. Kat doesn't like Gab's insisting so she won't to talk to him at all.,Gab and Kat will meet for a drink.,12.1212,missing_information
+13728809,"Julia: I mean I like my Instagram. And my Snapchat. Oh and Twitter. And sometimes Facebook.
+Gail: So do I. But this doesn't mean I'm addicted. 
+Julia: Neither am I. I like looking at photos of my friends and sharing stuff with them. And I think they like it when I post stuff.
+Gail: I certainly do. And I like to spy on ppl :)
+Julia: Rly?
+Gail: Yeah! It's a lot of fun! Like I was spying on Em and turns out she's into some guy from work ;)
+Julia: Rly? Intriguing.
+Gail: I know! :) and Jessica is thinking about going on diet.
+Julia: Wasn't she on one already?
+Gail: Nah. Whenever she posts a lot of fitness-related stuff, she's just thinking about, but doing nothing rly. 
+Julia: I always thought she was training day and night!
+Gail: Nah. That's just how she is. The more she posts, the less she does. Like she had a phase for animal shelters. Remember?
+Julia: Yeah. She just wouldn't shut up about it. She posted every single thing she could find on the subject!
+Gail: Right. And turned out that was everything she did. Never visited one. Never donated a dime. Never did anything.
+Julia: And all the time I thought she was so active and pro-active and charitable. She had me fooled ;)
+Gail: U see? Spying on ppl is fun :)
+Julia: Speaking of which, did u spy on me?
+Gail: No, y would I?
+Julia: It's fun?
+Gail: Oh no! Don't get me wrong! We talk all the time, so no need to spy on u ;)
+Julia: Gr8.
+Gail: Besides ur pretty straightforward.
+Julia: What do u mean?
+Gail: When ur eating, u post food. When ur training, u post fitness materials or photos. When ur relaxing, u post a bunch of stuff.
+Julia: I know :) that's y ppl like what I do, 'caus I genuine :)
+Gail: Yeah...
+Julia: What's that supposed to mean?
+Gail: Hillary thinks u overdo it and have no life in real life.
+Julia: That bitch!
+Gail: I know!",Jessica posts a lot regarding subjects she does nothing about in reality. Julia posts in a more genuine way. But Hillary thinks she does it to death and lacks real life.,"Julia likes her Instagram, Snapchat, Twitter and Facebook. Gail likes her friends. Jessica is thinking about going on diet. Gails thinks Jessica is too active and pro-active and charitable.",13.1148,missing_information
+13728229,"Sebastian: It's been already a year since we moved here.
+Sebastian: This is totally the best time of my life.
+Kevin: Really? 
+Sebastian: Yeah! Totally maaan.
+Sebastian: During this 1 year I learned more than ever. 
+Sebastian: I learned how to be resourceful, I'm learning responsibility, and I literally have the power to make my dreams come true.
+Kevin: It's great to hear that.
+Kevin: It's great that you are satisfied with your decisions.
+Kevin: And above all it's great to see that you have someone you love by your side :)
+Sebastian: Exactly!
+Sebastian: That's another part of my life that is going great.
+Kevin: I wish I had such a person by my side.
+Sebastian: Don't worry about it.
+Sebastian: I have a feeling this day will come shortly.
+Kevin: Haha. I don' think so, but thanks.
+Sebastian: This one year proved to me that when you want something really badly, you can achieve it.
+Kevin: I want to win lottery and I never did :D
+Sebastian: If you devoted your life to analyze all of the winning numbers, and with your math skills you could win.
+Kevin: Devote myself and million dollars for lottery tickets.
+Sebastian: Something like that xD
+Kevin: I'm happy for you man.
+Kevin: I really am
+Sebastian: Thanks. It means a lot my friend :)","Sebastian is very happy with his life, and shares this happiness with Kevin.","Sebastian and Kevin have been living in New York for a year. Sebastian has learned how to be resourceful, he is learning responsibility and he has a lot of experience.",13.9535,missing_information
+13730736,"Harry: heyyyy are you there??
+Cindy: Yes dear what is it?
+Harry: Can you call Ela and tell her i need to talk urgent please pick my call.
+Cindy: what happened now? an other fight :O
+Harry: please tell her
+Cindy: MAN! you guys... am i some kind of a messenger service here?
+Harry: PLEASEEEEEEEEE ?
+Cindy: ok doing.... but thats the last time.
+Harry: Yes like always:P
+Cindy: Hate you seriously man.
+Harry: Thank you
+Cindy: Done you can call her now.",Ela is not taking Harry's phone calls. Cindy calls Ela at Harry's request.,Harry needs to talk to Ela urgently. He has a fight with Ela.,14.2857,missing_information
+13730105,"Anna: Still, great app! And it's for men too! U choose ur sex and then add photos of clothes :)
+Peter: Is there a minimum number of clothes I should add?
+Anna: No! And there is no maximum! You can add as many as u want!
+Peter: So if I only add 3 items, I will always get the same results?
+Anna: Ur still making fun of me!
+Peter: I just don't get it. Every morning I approach my wardrobe, open it, choose the clothes I want to wear or prepare them the previous day and that's it. I don't need an app to tell me what to wear with what.
+Anna: Okay... Let's play a game. 
+Peter: You're not going to make me cut my fingers off?
+Anna: No ;) how many pairs of trousers do u have?
+Peter: 5 or 6.
+Anna: How many shirts do you have?
+Peter: T-shirts or regular shirts?
+Anna: Shirts. Let's focus on ur work look.
+Peter: 3 or 4.
+Anna: What about jackets?
+Peter: 2.
+Anna: Great! Now imagine I have 12 shirts, 10 pairs of trousers, and 6 jackets. And I have to decide what to wear in a split second.
+Peter: All right. It's slowly dawning on me. ",Anna likes a new app in which you can virtually try on clothes. Peter is not quite convinced it is necessary.,Anna and Peter are playing a game.,14.2857,missing_information
+13728958,"Deirdre: Hi Beth, how are you love?
+Beth: Hi Auntie Deirdre, I'm been meaning to message you, had a favour to ask.
+Deirdre: Wondered if you had any thought about your Mum's 40th, we've got to do something special!
+Beth: How about a girls weekend, just mum, me, you and the girls, Kira will have to come back from Uni, of course.
+Deirdre: Sounds fab! Get your thinking cap on, it's only in 6 weeks! Bet she's dreading it, I remember doing that!
+Beth: Oh yeah, we had a surprise party for you, you nearly had a heart attack! 
+Deirdre: Well, it was a lovely surprise! Gosh, thats nearly 4 years ago now, time flies! What was the favour, darling?
+Beth: Oh, it was just that I fancied trying a bit of work experience in the salon, auntie.
+Deirdre: Well, I am looking for Saturday girls, are you sure about it? you could do well in the exams and go on to college or 6th form.
+Beth: I know, but it's not for me, auntie, I am doing all foundation papers and I'm struggling with those.
+Deirdre: What about a tutor? Kira could help you in the hols.
+Beth: Maybe, but I'd like to try working. I'm 16 soon, I'm old enough.
+Deirdre: I know. Look, pop in tomorrow after school and we'll have a cuppa and a chat.
+Beth: Yes, thanks auntie. I'd really like to try the beauty therapy side.
+Deirdre: Its not for the squeamish, mind. Massage, pedicures, not to mention waxing!
+Beth: Oh yes, I was chatting to a friend about it yesterday!
+Deirdre: Maxine manages the beauty side, you can meet her tomorrow and we'll see how it goes.
+Beth: Yes, I'd really like that. 
+Deirdre: We can try a few hours on a Saturday for a couple of weeks as work experience. I'll give you a tenner or so per session to start off for your lunch, coffee and bus fare etc. If you like, we'll take it from there.
+Beth: OK, I like the sound of it! See you tomorrow Auntie! Love you!
+Deirdre: Bye, lovely girl! Xx",Beth wants to organize a girls weekend to celebrate her mother's 40th birthday. She also wants to work at Deidre's beauty salon. Deidre offers her a few hours on Saturdays as work experience. They set up for a meeting tomorrow.,Deirdre is looking for Saturday girls to go to the salon. Beth is 16 soon and wants to try working. Deirdre will give Beth tenner per session.,14.4928,missing_information
+13728313,"Kim: Hey, listen, have you got any idea where I can get some fresh ramal fish in Warsaw?
+Margot: Hi, I don't know about ""fresh"", but you could try the marketplace at Polna street. 
+Margot: Other than that, I haven't got a clue...
+Kim: Already tried Polna :(
+Margot: Ah!
+Margot: Hm...
+Margot: And did you check Internet for fish market in Warsaw?
+Kim: Yeah, there's none.
+Kim: Or I didn't find it. 
+Margot: You could have a look at restaurants' menus. And if you find it there, you could ask about their source. 
+Margot: Although I'm not sure they'd eager to give you such infromation. But you can always try..
+Kim: Great idea, I haven't though about this! Thx!
+Kim: I'll try. After all, I have nothing to loose. 
+Margot: Btw, is there a special occasion you want to cook it for?
+Kim: Yes! Acctually I'll grill it ;)
+Kim: And it's a surprise, so I'm not giving away any details!
+Margot: I'm so curious!
+Margot: I understant it's sth good, so I'm happy for you girl :)
+Kim: Indeed, it's good. But you won't get any more infromation from me now.
+Kim: All in good time :)
+Margot: Cruel you! Find that fish!!! ;)
+Kim: :D",Kim needs to get some fresh fish in Warsaw. Kim will ask at restaurants about their source. Kim is planning something special but won't share any details with Margot for now.,Kim will cook ramal fish for a special occasion.,14.6341,missing_information
+13681246,"Marvin: When's the last time you got laid ?
+Melany: I don't even remember..
+Marvin: Hmm so there must be lots of cobwebs between your legs now huh hahaha",It's been very long since Melany last had sex. Marvin made an inappropriate joke about it.,Melany doesn't remember the last time she got laid.,14.8148,missing_information
+13682006,"Trevor: I've got a bit of a problem, Uncle
+Richard: Have you, Trevor?
+Trevor: Yes, Uncle I need to get you advice on how to break this to Dad
+Richard: You haven't gone and got that Abigail up the duff have you?
+Trevor: That's the long and short of it, Uncle.
+Richard: Shit. How did that happen?
+Trevor: Well, it's her father's fault, Uncle.
+Richard: Her father's fault? And him a church pastor?
+Trevor: Yes, Uncle. She has sneaked me into the house really quietly and we are in her bedroom doing it.
+Richard: Fucking hell. Do go on.
+Trevor: And we haven't got any condoms so I am planning to pull out at the last moment
+Richard: Unbelieveable: Bloody idiot. What then?
+Trevor: So I am just pulling out and all of a sudden in bursts her father and delivers me such a kick up the arse that I am back in there coming.
+Richard: So you say it is all his fault, then? Incredible.
+Trevor: Yes. 
+Richard: So maybe we can get him to pay the child support instead of you then, eh?","Trevor got Abigail pregnant. When they were having sex without protection her father, a church pastor, kicked Trevor in the butt and Trevor came inside Abigail. ",Trevor is going to tell his father that Abigail got him up the duff.,15.0,wrong_names
+13680506,"Caroline: ""I am this close to tugging on my testicles again""
+Megan: Friends, right?
+Caroline: Bravo! Who said it?
+Megan: Ross or Chandler... Ross!
+Caroline: <file_gif>",Caroline and Megan play a guessing game - they need to guess which film a quote comes from.,Caroline is close to tugging on her testicles again.,15.3846,hallucination
+13862785,"Rob: hey, pick up your phone :)
+Ann: can't - meeting :)
+Rob: sorry...
+Ann: no problem - super boring one :) 
+Ann: what you need babe?
+Rob: I'm at the grocery store and was wondering if we need anything
+Ann: some food :)
+Rob: yeah, I figured that smartass :)
+Ann: :*
+Rob: details? so that you won't moan we don't have anything to eat :)
+Ann: from what I remember we have everything for supper and lunch tomorrow, maybe some fruit and vegetables?
+Rob: anything in particular?
+Ann: cucumber, tomatoes, bananas, apples and whatever you like
+Rob: ok","Rob is doing shopping at the grocery store. Ann ordered him to buy a cucumber, some tomatoes, bananas and apples.",Ann can't pick up her phone because she has a meeting tomorrow. Rob will buy some food for her and some fruit and vegetables for supper and lunch tomorrow.,16.0,hallucination
+13828103,"Lincoln: Heeyyy ;* whats up
+Fatima: I talked to Jenson, he’s not too happy ;p
+Lincoln: the place sucks??
+Fatima: No, the place is ok, I think, we can go there, it’s about Alene
+Lincoln: typical, dont worry about it
+Fatima: He thinks she may have a depression :[
+Lincoln: nothin new, everyone has it, she needs a doctor then
+Fatima: But she won’t go ;/
+Lincoln: so she’s destroying her life fuck it its not your problem
+Fatima: It is, they’re both my friends!
+Lincoln: you better think what to do if they break up
+Fatima: Ehh yes Ill have a problem ;//
+Lincoln: both blaming each other and talking with you about it, perfect
+Fatima: Alene is just troubled… She’d been through a lot…
+Lincoln: everyone has their problems, the question is are ya doin sth about them
+Fatima: She has problems facing it, don’t be surprised :[
+Lincoln: then it is her problem
+Fatima: You are so cruel at times… o.O
+Lincoln: maybe, for me its just a common sense
+Fatima: Why can’t everyone be just happy???
+Lincoln: youll not understand, you had good childhood, nice parents, you have no idea
+Fatima: Probably, true… Well I can be just grateful o.o
+Lincoln: do that and stop worrying about others, youre way to bautful for that <3
+Fatima: :*:*:*",Fatima is worried about Jenson and Alene. Alene has issues. Lincoln doesn't want Fatima to worry about others too much.,Lincoln and Fatima are going to visit Jenson. Alene is depressed and she needs a doctor.,16.2162,hallucination
+13611640,"Ann: What should I prepare 4 my dad's birthday?
+Fiona: How old is he?
+Ann: turning 50
+Fiona: wow, a round birthay, it must be sth big
+Ann: I know, but I don't have any idea
+Fiona: surprise party?
+Ann: My dad hates dose
+Fiona: ok, so what does he like?
+Ann: I don't know, he watch a lot of military movie
+Fiona: well, a movie ticket is probably not what you thought of
+Ann: not even close
+Fiona: Maybe some event. U know like bungee jumping or parachute jump
+Ann: that would be nice but he's afraid of heights
+Fiona: damn, maybe sth you can do together
+Ann: well I was plannig dinner with the whole family, but that's not enough
+Fiona: yes, there should be sth special also
+Ann:  I know, but I'm out of 
+Fiona: Let me think. Nothing with heights but maybe sth on the ground? Racing? Horse riding?
+Ann: ok, it's a good direction. Maybe some team play, we could go with the whole family
+Fiona: u said he likes military... maybe paintball? 
+Ann: I don't know how my mum will react but I like it :D
+Fiona: I guess she's not into military
+Ann: not really, no. But it's dad's birthday so she has to accept it. Thx for the help
+Fiona: no problem",Ann doesn't know what she should give to her dad as a birthday gift. He's turning 50. Fiona tries to help her and suggests a paintball match.,Ann is planning a surprise birthday party for her dad. She will probably do some sports or horse riding.,16.6667,wrong_names

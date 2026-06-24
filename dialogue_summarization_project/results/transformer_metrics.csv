@@ -1,0 +1,2 @@
+test_loss,test_model_preparation_time,test_rouge1,test_rouge2,test_rougeL,test_rougeLsum,test_runtime,test_samples_per_second,test_steps_per_second,model_name,evaluated_samples
+1.502435326576233,0.0053,50.4601,26.0568,42.2422,42.2432,191.4597,4.278,2.141,BART Fine-tuned Transformer,819

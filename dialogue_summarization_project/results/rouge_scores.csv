@@ -1,0 +1,2 @@
+model_name,rouge1,rouge2,rougeL
+TF-IDF Extractive Baseline,0.305262250959256,0.09742533119135173,0.2296787079497216

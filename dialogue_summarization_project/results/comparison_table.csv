@@ -1,0 +1,3 @@
+model_name,model_type,method,evaluated_samples,rouge1,rouge2,rougeL
+TF-IDF Extractive Baseline,Classical NLP,TF-IDF sentence scoring,819,0.305262250959256,0.0974253311913517,0.2296787079497216
+BART Fine-tuned Transformer,Transformer,Fine-tuned facebook/bart-base,819,50.4601,26.0568,42.2422

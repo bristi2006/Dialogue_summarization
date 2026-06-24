@@ -1,0 +1,6 @@
+Experiment,Num Beams,ROUGE-1,ROUGE-2,ROUGE-L
+Greedy decoding,1,49.5524,23.8232,40.6584
+Beam search (size 2),2,50.1097,24.4974,41.2171
+Beam search (size 4),4,50.2402,25.4973,42.1534
+Beam search (size 6),6,50.62,25.7108,42.5317
+Beam search (size 8),8,51.5601,26.3815,43.1294
