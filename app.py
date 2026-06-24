@@ -366,13 +366,15 @@ def render_input_panel():
             st.session_state.last_uploaded_file = None
 
         st.markdown(f'<div class="input-title" style="margin-top: 18px;">{icon_svg("dialogue")} Enter Your Dialogue</div>', unsafe_allow_html=True)
-        st.text_area(
+        dialogue_text = st.text_area(
             "",
-            key="dialogue",
+            value=st.session_state.dialogue,
+            key="dialogue_input",
             height=300,
             placeholder="A: Hi\nB: Hello, how are you?\nA: I'm doing great! Working on an AI project...\nB: That sounds interesting!",
             label_visibility="collapsed",
         )
+        st.session_state.dialogue = dialogue_text
 
         if st.session_state.validation_error:
             st.error(st.session_state.validation_error)
@@ -530,7 +532,10 @@ def render_output_panel():
         st.markdown(f'<div class="summary-body" style="margin-top: 12px;">{escape(summary_text)}</div>', unsafe_allow_html=True)
 
     # Render Statistics Card
-    input_words, summary_words, compression = calculate_stats(st.session_state.dialogue, summary_text)
+    input_text = st.session_state.get("dialogue", "")
+    if not isinstance(input_text, str):
+        input_text = ""
+    input_words, summary_words, compression = calculate_stats(input_text, summary_text)
 
     with st.container(border=True):
         st.markdown(f'<div class="stats-title">{icon_svg("stats")} Statistics</div>', unsafe_allow_html=True)
